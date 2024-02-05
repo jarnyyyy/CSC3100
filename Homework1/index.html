@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration Form</title>
+        <link href="css/lib/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bootstrap-4@4/bootstrap-4.css" rel="stylesheet">
+    </head>
+    <body class="bg-white">
+        <h2 class="col-10 offset-1 mt-3">Registration Form</h2>
+        <div class="col-6 offset-1 mt-4">
+            <form class="col-10 offset-1">
+                <label for="txtFirstName" class="form-label mt-1">First Name</label>
+                <input id="txtFirstName" placeholder="First Name" type="text" aria-label="First Name" class="form-control">
+
+                <label for="txtLastName" class="form-label mt-1">Last Name</label>
+                <input id="txtLastName" placeholder="Last Name" type="text" aria-label="Last Name" class="form-control">
+
+                <label for="txtAddress1" class="form-label mt-1">Street Address</label>
+                <input id="txtAddress1" placeholder="Street Address 1" type="text" aria-label="Street Address 1" class="form-control">
+
+                <!-- <label for="txtAddress2" class="form-label mt-1">Street Address 2</label> -->
+                <input id="txtAddress2" placeholder="Street Address 2" type="text" aria-label="Street Address 2" class="form-control">
+
+                <label for="txtCity" class="form-label mt-1">City</label>
+                <input id="txtCity" placeholder="City" type="text" aria-label="City" class="form-control">
+
+                <label for="slctState" class="form-label mt-1">State</label>
+                <select name="slctState" id="slctState" class="form-select" aria-label="State">
+                    <option value="AL">AL</option>
+                    <option value="AK">AK</option>
+                    <option value="AZ">AZ</option>
+                    <option value="AR">AR</option>
+                    <option value="CA">CA</option>
+                    <option value="CO">CO</option>
+                    <option value="CT">CT</option>
+                    <option value="DE">DE</option>
+                    <option value="FL">FL</option>
+                    <option value="GA">GA</option>
+                    <option value="HI">HI</option>
+                    <option value="ID">ID</option>
+                    <option value="IL">IL</option>
+                    <option value="IN">IN</option>
+                    <option value="IA">IA</option>
+                    <option value="KS">KS</option>
+                    <option value="KY">KY</option>
+                    <option value="LA">LA</option>
+                    <option value="ME">ME</option>
+                    <option value="MD">MD</option>
+                    <option value="MA">MA</option>
+                    <option value="MI">MI</option>
+                    <option value="MN">MN</option>
+                    <option value="MS">MS</option>
+                    <option value="MO">MO</option>
+                    <option value="MT">MT</option>
+                    <option value="NE">NE</option>
+                    <option value="NV">NV</option>
+                    <option value="NH">NH</option>
+                    <option value="NJ">NJ</option>
+                    <option value="NM">NM</option>
+                    <option value="NY">NY</option>
+                    <option value="NC">NC</option>
+                    <option value="ND">ND</option>
+                    <option value="OH">OH</option>
+                    <option value="OK">OK</option>
+                    <option value="OR">OR</option>
+                    <option value="PA">PA</option>
+                    <option value="RI">RI</option>
+                    <option value="SC">SC</option>
+                    <option value="SD">SD</option>
+                    <option value="TN">TN</option>
+                    <option value="TX">TX</option>
+                    <option value="UT">UT</option>
+                    <option value="VT">VT</option>
+                    <option value="VA">VA</option>
+                    <option value="WA">WA</option>
+                    <option value="WV">WV</option>
+                    <option value="WI">WI</option>
+                    <option value="WY">WY</option>
+                </select>
+
+                <label for="txtZip" class="form-label mt-1">Zipcode</label>
+                <input id="txtZip" placeholder="Zipcode" type="text" aria-label="Zipcode" class="form-control">
+
+                <label for="telPhone" class="form-label mt-1">Phone Number</label>
+                <input id="telPhone" placeholder="XXX-XXX-XXXX" type="tel" aria-label="Phone Number" class="form-control">
+
+                <label for="txtEmail" class="form-label mt-1">Email</label>
+                <input id="txtEmail" placeholder="Email" type="text" aria-label="Email" class="form-control">
+
+                <label for="txtPassword" class="form-label mt-1">Password</label>
+                <input id="txtPassword" placeholder="Password" type="password" aria-label="Password" class="form-control">
+
+                <button id="btnSubmit" type="button" class="btn btn-primary col-3 mt-3">Submit</button>
+                <!--<br>-->
+                <button id="btnReset" type="button" class="btn btn-secondary col-3 mt-3">Reset</button>
+                <br>
+                <br>
+            </form>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+        <script>
+            $('#btnReset').on('click', function(){
+                $('#txtFirstName').val('');
+                $('#txtLastName').val('');
+                $('#txtEmail').val('');
+                $('#txtPassword').val('');
+                $('#txtAddress1').val('');
+                $('#txtAddress2').val('');
+                $('#txtCity').val('');
+                $('#txtZip').val('');
+                $('#telPhone').val('');
+                $('#txtEmail').val('');
+                $('#txtPassword').val('');
+            })
+
+            $('#btnSubmit').on('click', function(){
+                let strFirstName = $('#txtFirstName').val();
+                let strLastName = $('#txtLastName').val();
+                let strEmail = $('#txtEmail').val();
+                let strPassword = $('#txtPassword').val();
+                let strAddress1 = $('#txtAddress1').val();
+                let strAddress2 = $('txtAddress2').val();
+                let strCity = $('#txtCity').val();
+                let strZipcode = $('#txtZip').val();
+                let intPhone = $('#telPhone').val();
+
+                let blnError = false;
+                let strErrorMessage = '';
+                if(strFirstName.length < 1){
+                    blnError = true;
+                    strErrorMessage = strErrorMessage + 'Firstname cannot be blank. ';
+                }
+                if(strLastName.length < 1){
+                    blnError = true;
+                    strErrorMessage = strErrorMessage + 'Lastname cannot be blank. ';
+                }
+                if(strEmail.length < 1){
+                    blnError = true;
+                    strErrorMessage = strErrorMessage + 'Email cannot be blank. ';
+                }
+                if(strPassword.length < 1){
+                    blnError = true;
+                    strErrorMessage = strErrorMessage + 'Password cannot be blank. ';
+                }
+                if(strAddress1.length < 1){
+                    blnError = true;
+                    strErrorMessage = strErrorMessage + 'Address cannot be blank. ';
+                }
+                if(strCity.length < 1){
+                    blnError = true;
+                    strErrorMessage = strErrorMessage + 'City cannot be blank. ';
+                }
+                if(strZipcode.length < 1){
+                    blnError = true;
+                    strErrorMessage = strErrorMessage + 'Zipcode cannot be blank. ';
+                }
+                if(strEmail.length < 1){
+                    blnError = true;
+                    strErrorMessage = strErrorMessage + 'Email cannot be blank. ';
+                }
+                if(strPassword.length < 1){
+                    blnError = true;
+                    strErrorMessage = strErrorMessage + 'Password cannot be blank. ';
+                }
+                if (blnError == true){
+                    console.log(strErrorMessage);
+                    Swal.fire({
+                        title: "Oops!",
+                        text: strErrorMessage,
+                        icon: "error"
+                    });
+                } else {
+                    console.log('No errors found');
+                    Swal.fire({
+                        title: "Hooray!",
+                        text: "Form submitted",
+                        icon: "success"
+                    });
+                }
+            })
+
+        </script>
+    </body>
+</html>
